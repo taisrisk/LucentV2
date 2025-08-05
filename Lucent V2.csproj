@@ -32,9 +32,35 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +72,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AIMenu.Designer.cs">
+      <DependentUpon>AIMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HiddenScrollPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AIMenu.resx">
+      <DependentUpon>AIMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +103,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +118,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Assests\LucentLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Assests\Close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Assests\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\AimSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\vision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\brain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\objectives.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\profile-candidate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\deep-learning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\optimization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\hair-spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x64\Assests\machine-learning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
