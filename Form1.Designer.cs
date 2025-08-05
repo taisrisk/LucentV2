@@ -146,7 +146,7 @@
             this.ExtraMenuBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExtraMenuBTN.Image = global::Lucent_V2.Properties.Resources.deep_learning;
             this.ExtraMenuBTN.ImageRotate = 0F;
-            this.ExtraMenuBTN.Location = new System.Drawing.Point(8, 228);
+            this.ExtraMenuBTN.Location = new System.Drawing.Point(8, 99);
             this.ExtraMenuBTN.Name = "ExtraMenuBTN";
             this.ExtraMenuBTN.Size = new System.Drawing.Size(40, 40);
             this.ExtraMenuBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@
             this.VisionMenuBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.VisionMenuBTN.Image = global::Lucent_V2.Properties.Resources.vision;
             this.VisionMenuBTN.ImageRotate = 0F;
-            this.VisionMenuBTN.Location = new System.Drawing.Point(8, 182);
+            this.VisionMenuBTN.Location = new System.Drawing.Point(8, 53);
             this.VisionMenuBTN.Name = "VisionMenuBTN";
             this.VisionMenuBTN.Size = new System.Drawing.Size(40, 40);
             this.VisionMenuBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +170,7 @@
             this.AIMenuBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AIMenuBTN.Image = global::Lucent_V2.Properties.Resources.objectives;
             this.AIMenuBTN.ImageRotate = 0F;
-            this.AIMenuBTN.Location = new System.Drawing.Point(8, 136);
+            this.AIMenuBTN.Location = new System.Drawing.Point(8, 7);
             this.AIMenuBTN.Name = "AIMenuBTN";
             this.AIMenuBTN.Size = new System.Drawing.Size(40, 40);
             this.AIMenuBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,7 @@
             this.MenuPanel.BackColor = System.Drawing.Color.Transparent;
             this.MenuPanel.BorderRadius = 15;
             this.MenuPanel.Controls.Add(this.aiMenu1);
-            this.MenuPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(13)))), ((int)(((byte)(19)))));
+            this.MenuPanel.FillColor = System.Drawing.Color.Transparent;
             this.MenuPanel.Location = new System.Drawing.Point(12, 74);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(714, 406);
